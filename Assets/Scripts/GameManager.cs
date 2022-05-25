@@ -155,7 +155,12 @@ public class GameManager : MonoBehaviour {
     public void KillDirect()
     {
         KillHumans();
+        if ()(
+                {}
+                    )
+            helpObject.SetActive(true);
         StartCoroutine(BadEnum());
+            isFrozen = true;
     }
 
     IEnumerator BadEnum()
@@ -207,13 +212,13 @@ public class GameManager : MonoBehaviour {
         yield return new WaitForSeconds(2f);
         Talker.Instance.Talk("Death\nWAS\nan\noption");
         yield return new WaitForSeconds(4f);
-        Talker.Instance.Talk("But\nnot\nfor\nyou");
-        yield return new WaitForSeconds(4f);
+        Talker.Instance.Talk("But\nit\nwill\nnot\nbe\nfor\nyou");
+        yield return new WaitForSeconds(7f);
         bombGameObject.SetActive(true);
         bombGameObject.transform.DOMoveX(0, 1f).SetEase(Ease.OutCubic);
         yield return new WaitForSeconds(2f);
-        Talker.Instance.Talk("Use\nyour\nbrain");
-        yield return new WaitForSeconds(30f);// BOMB WAIT TIME
+        Talker.Instance.Talk("hehe");
+        yield return new WaitForSeconds(33f);// BOMB WAIT TIME
         AudioManager.main.Play("bigbomb");
         bombGameObject.SetActive(false);
         fadeOutGameObject.SetActive(true);
